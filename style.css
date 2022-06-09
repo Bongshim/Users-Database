@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --primary-background-color: #fff;
+  --secondary-background-color: #90375b;
+  --primary-text-color: #313131;
+  /* --list-hover-color: #E8D1BA;  */
+  --list-hover-color: #fce3ed;
+  /* --list-detail-background-color: #FFAA55; */
+  --list-detail-background-color: #e8c5d3;
+  /* --button-hover-color: #C4A17E; */
+  --button-hover-color: #c47e9a;
+  /* --tool-color: #FFAA55 ; */
+  --tool-color: #663247;
+  /* --list-details-hover-color: #FFBD7A; */
+  --list-details-hover-color: #d498b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+/* MAIN SECTION */
+main {
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+main,
+.userlist-section {
+  margin-top: 2rem;
+}
+
+/* HEADING SECTION */
+.heading-section {
+  background: #663247;
+  border-radius: 6px;
+}
+
+.heading {
+  margin: 1rem 0;
+  color: #fff;
+  padding-left: 0.8rem;
+  padding-top: 1rem;
+}
+
+/* SEARCH SECTION */
+
+.search-section {
+  background-color: var(--secondary-background-color);
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#search {
+  /* all:unset; */
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  background-color: var(--primary-background-color);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  color: var(--primary-text-color);
+}
+
+.filter {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.filter label {
+  color: #fff;
+}
+
+select {
+  background-color: var(--primary-background-color);
+  border: none;
+  width: 10rem;
+  height: 2rem;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+/* USER LIST SECTION */
+
+li {
+  position: relative;
+  z-index: 10;
+  list-style: none;
+}
+.userlist-section {
+  width: 100%;
+}
+
+.userlist-container li {
+  border: 1px solid #d4d4d4;
+
+  cursor: pointer;
+}
+
+li .user-sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.userinfo {
+  width: 80%;
+}
+
+.userlist-container li:not(:first-child) {
+  margin-top: -1px;
+}
+
+.userlist-container li .user-sum .userinfo span:not(:last-child) {
+  padding-right: 0.5rem;
+}
+
+.userlist-container li .user-sum .userinfo span {
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: 2rem;
+  color: var(--primary-text-color);
+}
+
+.more {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.more:hover {
+  background-color: var(--button-hover-color);
+  color: #fff;
+}
+
+#moreBtn {
+  font-size: 0.8rem;
+  color: var(--primary-text-color);
+  font-weight: 400;
+}
+
+.userlist-container li:hover {
+  background-color: var(--list-hover-color);
+}
+
+.username {
+  background-color: var(--tool-color);
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #fff !important;
+}
+
+/* USER DETAILS SECTION */
+.user-details {
+  position: relative;
+  z-index: 5;
+  display: none;
+  margin-top: 0.5rem;
+  background-color: var(--list-detail-background-color);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-details .flex-container span {
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding: 0.5rem 1rem;
+}
+
+.user-details .flex-container span:nth-child(even) {
+  background-color: var(--list-details-hover-color);
+}
+
+/* Media query for large screens */
+
+@media (min-width: 1000px) {
+  main {
+    width: 50%;
+  }
+}
